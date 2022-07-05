@@ -1,6 +1,12 @@
 <resources>
-    <string name="app_name">Desafio de Projeto Futebol Feminino</string>
+    <string name="app_name">Women Soccer</string>
 
     <string name="title_news">News</string>
     <string name="title_favorites">Favorites</string>
+    <string name="content_description_media">Team picture</string>
+    <string name="title" translatable="false">Hold Title TV</string>
+    <string name="secondary_text" translatable="false">Hold secondary text</string>
+    <string name="action_1">Open in browser</string>
+    <string name="share_button">Share button</string>
+    <string name="favorite_button">Favorite button</string>
 </resources>

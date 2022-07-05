@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         configAppBarNavigation();
+
+        //https://danielh-oliveira.github.io/soccer-news-api/news-api.json
     }
 
     private void configAppBarNavigation() {

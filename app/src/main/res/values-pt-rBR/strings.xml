@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Futebol Feminino</string>
+
+    <string name="title_news">Notícias</string>
+    <string name="title_favorites">Favoritos</string>
+    <string name="content_description_media">Foto do time</string>
+    <string name="action_1">Abrir no navegador</string>
+    <string name="share_button">Botão de compartilhar</string>
+    <string name="favorite_button">Botão de favoritar</string>
+
+</resources>
