@@ -13,8 +13,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- Media -->
-        <!--  app:srcCompat="@drawable/media" -->
         <ImageView
             android:id="@+id/ivFirst"
             android:layout_width="match_parent"
@@ -30,13 +28,14 @@
             android:orientation="vertical"
             android:padding="@dimen/medium_size_default">
 
-            <!-- Title, secondary and supporting text -->
             <TextView
                 android:id="@+id/tvTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/title"
                 android:textAppearance="?attr/textAppearanceHeadline6"
+                android:ellipsize="end"
+                android:maxLines="4"
                 tools:text="@tools:sample/lorem[5]" />
 
             <TextView
