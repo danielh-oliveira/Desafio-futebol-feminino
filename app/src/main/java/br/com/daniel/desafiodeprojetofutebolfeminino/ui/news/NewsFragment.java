@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -26,6 +27,9 @@ public class NewsFragment extends Fragment {
         binding.rvNews.setLayoutManager(new LinearLayoutManager(getContext()));
         newsViewModel.getNews().observe(getViewLifecycleOwner(), news -> {
             binding.rvNews.setAdapter(new NewsAdapter(news));
+        });
+        newsViewModel.getStatus().observe(getViewLifecycleOwner(), status -> {
+            Toast.makeText(getActivity(), "An error occurred while fetching news", Toast.LENGTH_SHORT).show();
         });
         return root;
     }

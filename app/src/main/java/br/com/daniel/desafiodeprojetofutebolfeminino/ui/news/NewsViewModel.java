@@ -1,7 +1,5 @@
 package br.com.daniel.desafiodeprojetofutebolfeminino.ui.news;
 
-import android.widget.Toast;
-
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
