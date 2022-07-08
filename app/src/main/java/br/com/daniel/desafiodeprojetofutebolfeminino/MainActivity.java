@@ -9,6 +9,10 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import br.com.daniel.desafiodeprojetofutebolfeminino.databinding.ActivityMainBinding;
+import br.com.daniel.desafiodeprojetofutebolfeminino.model.News;
+import br.com.daniel.desafiodeprojetofutebolfeminino.repository.local.AppDatabase;
+import br.com.daniel.desafiodeprojetofutebolfeminino.repository.local.DatabaseInitializer;
+import br.com.daniel.desafiodeprojetofutebolfeminino.repository.local.NewsDao;
 
 public class MainActivity extends AppCompatActivity {
 

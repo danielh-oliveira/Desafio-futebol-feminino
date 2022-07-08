@@ -7,6 +7,9 @@ import androidx.lifecycle.ViewModel;
 import java.util.List;
 
 import br.com.daniel.desafiodeprojetofutebolfeminino.model.News;
+import br.com.daniel.desafiodeprojetofutebolfeminino.repository.local.AppDatabase;
+import br.com.daniel.desafiodeprojetofutebolfeminino.repository.local.DatabaseInitializer;
+import br.com.daniel.desafiodeprojetofutebolfeminino.repository.local.NewsDao;
 import br.com.daniel.desafiodeprojetofutebolfeminino.repository.remote.RetrofitInitializer;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -47,4 +50,5 @@ public class NewsViewModel extends ViewModel {
     public LiveData<Boolean> getStatus() {
         return status;
     }
+
 }
