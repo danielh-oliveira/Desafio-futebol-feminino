@@ -9,10 +9,8 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import br.com.daniel.desafiodeprojetofutebolfeminino.databinding.ActivityMainBinding;
-import br.com.daniel.desafiodeprojetofutebolfeminino.model.News;
-import br.com.daniel.desafiodeprojetofutebolfeminino.repository.local.AppDatabase;
+import br.com.daniel.desafiodeprojetofutebolfeminino.repository.Repository;
 import br.com.daniel.desafiodeprojetofutebolfeminino.repository.local.DatabaseInitializer;
-import br.com.daniel.desafiodeprojetofutebolfeminino.repository.local.NewsDao;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,10 +20,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        startRepository();
+
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         configAppBarNavigation();
+    }
+
+    private void startRepository() {
+        Repository.initialize(this);
     }
 
     private void configAppBarNavigation() {

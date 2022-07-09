@@ -5,15 +5,23 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitInitializer {
     private static Retrofit retrofit;
-    public static SoccerNewsAPI newsService;
+    private static SoccerNewsAPI newsService;
 
-    public RetrofitInitializer() {
+    private RetrofitInitializer() {
         if (retrofit == null) {
             retrofit = new Retrofit.Builder()
                     .baseUrl("https://danielh-oliveira.github.io/soccer-news-api/")
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
             newsService = retrofit.create(SoccerNewsAPI.class);
+        }
+    }
+
+    public static SoccerNewsAPI getNewsService() {
+        if (retrofit != null) {
+            return newsService;
+        } else {
+            return new RetrofitInitializer().getNewsService();
         }
     }
 
