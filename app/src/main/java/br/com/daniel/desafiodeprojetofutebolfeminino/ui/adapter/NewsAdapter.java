@@ -55,7 +55,6 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
     }
 
 
-
     private void implementShareButton(@NonNull ViewHolder holder, News news) {
         holder.binding.ButtonShare.setOnClickListener(view -> {
             Intent i = new Intent(Intent.ACTION_SEND);

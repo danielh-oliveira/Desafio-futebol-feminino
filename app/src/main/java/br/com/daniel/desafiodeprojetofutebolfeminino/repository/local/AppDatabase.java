@@ -6,6 +6,6 @@ import androidx.room.RoomDatabase;
 import br.com.daniel.desafiodeprojetofutebolfeminino.model.News;
 
 @Database(entities = {News.class}, version = 1)
-public abstract class AppDatabase extends RoomDatabase{
+public abstract class AppDatabase extends RoomDatabase {
     public abstract NewsDao newsDao();
 }

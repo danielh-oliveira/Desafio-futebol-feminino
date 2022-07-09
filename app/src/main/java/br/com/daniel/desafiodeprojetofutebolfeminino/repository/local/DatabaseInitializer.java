@@ -1,7 +1,6 @@
 package br.com.daniel.desafiodeprojetofutebolfeminino.repository.local;
 
 import android.content.Context;
-import android.util.Log;
 
 import androidx.room.Room;
 

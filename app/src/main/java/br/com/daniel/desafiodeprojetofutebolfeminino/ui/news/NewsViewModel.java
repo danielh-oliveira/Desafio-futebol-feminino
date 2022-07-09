@@ -9,7 +9,6 @@ import java.util.List;
 import br.com.daniel.desafiodeprojetofutebolfeminino.model.News;
 import br.com.daniel.desafiodeprojetofutebolfeminino.repository.Repository;
 import br.com.daniel.desafiodeprojetofutebolfeminino.repository.local.NewsDao;
-import br.com.daniel.desafiodeprojetofutebolfeminino.repository.remote.RetrofitInitializer;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -19,8 +18,6 @@ public class NewsViewModel extends ViewModel {
     private final MutableLiveData<List<News>> news = new MutableLiveData<>();
     private final MutableLiveData<Boolean> status = new MutableLiveData<>();
     private final NewsDao newsDao = Repository.getInstance().database.newsDao();
-
-    //TODO mover o controle do banco de dados para ca
 
     public NewsViewModel() {
         findNews();

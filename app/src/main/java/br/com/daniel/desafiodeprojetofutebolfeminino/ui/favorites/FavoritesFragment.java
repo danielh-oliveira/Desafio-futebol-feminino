@@ -14,18 +14,15 @@ import java.util.List;
 
 import br.com.daniel.desafiodeprojetofutebolfeminino.databinding.FragmentFavoritesBinding;
 import br.com.daniel.desafiodeprojetofutebolfeminino.model.News;
-import br.com.daniel.desafiodeprojetofutebolfeminino.repository.Repository;
-import br.com.daniel.desafiodeprojetofutebolfeminino.repository.local.DatabaseInitializer;
-import br.com.daniel.desafiodeprojetofutebolfeminino.repository.local.NewsDao;
 import br.com.daniel.desafiodeprojetofutebolfeminino.ui.adapter.NewsAdapter;
 
 public class FavoritesFragment extends Fragment {
 
     private FragmentFavoritesBinding binding;
-    private NewsDao newsDao = Repository.getInstance().database.newsDao();
+    private FavoritesViewModel favoritesViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        FavoritesViewModel favoritesViewModel = new ViewModelProvider(this).get(FavoritesViewModel.class);
+        favoritesViewModel = new ViewModelProvider(this).get(FavoritesViewModel.class);
 
         binding = FragmentFavoritesBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
@@ -36,11 +33,11 @@ public class FavoritesFragment extends Fragment {
     }
 
     private void loadFavorites() {
-        List<News> newsFavorites = newsDao.getNewsFavorites();
+        List<News> newsFavorites = favoritesViewModel.getNewsFavorites();
 
         binding.rvFavorites.setLayoutManager(new LinearLayoutManager(getContext()));
         binding.rvFavorites.setAdapter(new NewsAdapter(newsFavorites, updatedNews -> {
-            newsDao.update(updatedNews);
+            favoritesViewModel.update(updatedNews);
         }));
     }
 

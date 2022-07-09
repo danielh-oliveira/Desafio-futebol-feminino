@@ -12,8 +12,6 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import br.com.daniel.desafiodeprojetofutebolfeminino.databinding.FragmentNewsBinding;
-import br.com.daniel.desafiodeprojetofutebolfeminino.repository.local.DatabaseInitializer;
-import br.com.daniel.desafiodeprojetofutebolfeminino.repository.local.NewsDao;
 import br.com.daniel.desafiodeprojetofutebolfeminino.ui.adapter.NewsAdapter;
 
 public class NewsFragment extends Fragment {
@@ -33,7 +31,9 @@ public class NewsFragment extends Fragment {
             }));
         });
         newsViewModel.getStatus().observe(getViewLifecycleOwner(), status -> {
-            Toast.makeText(getActivity(), "An error occurred while fetching news", Toast.LENGTH_SHORT).show();
+            if (!status) {
+                Toast.makeText(getActivity(), "An error occurred while fetching news", Toast.LENGTH_SHORT).show();
+            }
         });
 
         return root;

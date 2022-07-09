@@ -1,19 +1,25 @@
 package br.com.daniel.desafiodeprojetofutebolfeminino.ui.favorites;
 
-import androidx.lifecycle.LiveData;
-import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class FavoritesViewModel extends ViewModel {
+import java.util.List;
 
-    private final MutableLiveData<String> mText;
+import br.com.daniel.desafiodeprojetofutebolfeminino.model.News;
+import br.com.daniel.desafiodeprojetofutebolfeminino.repository.Repository;
+import br.com.daniel.desafiodeprojetofutebolfeminino.repository.local.NewsDao;
+
+public class FavoritesViewModel extends ViewModel {
+    private NewsDao newsDao;
 
     public FavoritesViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("This is dashboard fragment");
+        newsDao = Repository.getInstance().database.newsDao();
     }
 
-    public LiveData<String> getText() {
-        return mText;
+    public List<News> getNewsFavorites() {
+        return newsDao.getNewsFavorites();
+    }
+
+    public void update(News news) {
+        newsDao.update(news);
     }
 }
