@@ -6,7 +6,9 @@ Para esse projeto usei LiveData, Retrofit, Room e Fragment. Desenvolvido na estr
 
 ## Imagens
 
-//TODO subir imagens
+Nas imagens abaixo é possivel ver o fragmento de noticias, o de favorito sem e com uma noticia favoritada.
+
+<img src="https://github.com/danielh-oliveira/Desafio-futebol-feminino/blob/master/imageMd/Noticias.jpeg" alt="Noticias sendo exibidas no app" width="200"/> &nbsp;&nbsp;&nbsp; <img src="https://github.com/danielh-oliveira/Desafio-futebol-feminino/blob/master/imageMd/Fav-sem.jpeg" alt="Tela de favoritos sem favorito" width="200"/> &nbsp;&nbsp;&nbsp; <img src="https://github.com/danielh-oliveira/Desafio-futebol-feminino/blob/master/imageMd/Fav-com.jpeg" alt="Favoritos com noticia favorita" width="200"/>
 
 ## .gif
 
